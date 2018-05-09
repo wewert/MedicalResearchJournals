@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import ConfirmEmailMessage from "../messages/ConfirmEmailMessage";
+import ConfirmLoginMessage from "../messages/ConfirmLoginMessage";
 
 const DashboardPage = ({ isConfirmed }) => (
       <div>
-        {!isConfirmed && <ConfirmEmailMessage />}
+        {!isConfirmed && <ConfirmLoginMessage />}
       </div>
     );
 
@@ -18,5 +18,7 @@ const DashboardPage = ({ isConfirmed }) => (
         isConfirmed: !!state.user.confirmed
       };
     }
+
+
 
 export default connect(mapStateToProps)(DashboardPage);
